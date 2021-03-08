@@ -1,0 +1,44 @@
+- hosts: web
+  tasks:
+  - name: "copy website"
+    copy:
+      src: site/
+      dest: /var/www/default
+  - name: "Yeet to yoo"
+    become: yes
+    become_user: root
+    replace: 
+      path: /var/www/default/index.html
+      regexp: 'Yeet'
+      replace: 'yooooooooooooooooooo'
+      backup: yes
+
+- hosts: web2
+  tasks:
+  - name: "copy website"
+    copy:
+      src: site/
+      dest: /var/www/default
+  - name: "Yeet to yoo"
+    become: yes
+    become_user: root
+    replace: 
+      path: /var/www/default/index.html
+      regexp: 'Yeet'
+      replace: 'WOWWWWWWWWWWWWWWWW'
+      backup: yes
+
+- hosts: web3
+  tasks:
+  - name: "copy website"
+    copy:
+      src: site/
+      dest: /var/www/default
+  - name: "Yeet to yoo"
+    become: yes
+    become_user: root
+    replace: 
+      path: /var/www/default/index.html
+      regexp: 'Yeet'
+      replace: 'yayyyyyyyyyyyyyy'
+      backup: yes 
